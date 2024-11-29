@@ -1,0 +1,92 @@
+
+# Raw datasets
+raw_patients:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/patients.csv
+  file_format: csv
+  load_args:
+    header: true
+    inferSchema: true
+
+raw_symptoms:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/symptoms.csv
+  file_format: csv
+  load_args:
+    header: true
+    inferSchema: true
+
+raw_conditions:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/conditions.xlsx
+  file_format: com.crealytics.spark.excel
+  load_args:
+    header: true
+    inferSchema: true
+
+raw_encounters:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/encounters.parquet
+  file_format: parquet
+
+raw_medications:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/medications.csv
+  file_format: csv
+  load_args:
+    header: true
+    inferSchema: true
+
+raw_patient_gender:
+  type: kedro_datasets.spark.SparkDataset
+  filepath: data/01_raw/patient_gender.csv
+  file_format: csv
+  load_args:
+    header: true
+    inferSchema: true
+
+# Staging tables: contains individual processed tables for all datasets
+conditions_table:
+  type: pandas.SQLTableDataset
+  credentials: sqlite_credentials
+  table_name: conditions_table
+  save_args:
+    if_exists: 'replace'
+
+encounters_table:
+  type: pandas.SQLTableDataset
+  credentials: sqlite_credentials
+  table_name: encounters_table
+  save_args:
+    if_exists: 'replace'
+
+patients_table:
+  type: pandas.SQLTableDataset
+  credentials: sqlite_credentials
+  table_name: patients_table
+  save_args:
+    if_exists: 'replace'
+
+medications_table:
+  type: pandas.SQLTableDataset
+  credentials: sqlite_credentials
+  table_name: medications_table
+  save_args:
+    if_exists: 'replace'
+
+symptoms_table:
+  type: pandas.SQLTableDataset
+  credentials: sqlite_credentials
+  table_name: symptoms_table
+  save_args:
+    if_exists: 'replace'
+
+master_data:
+  type: pandas.CSVDataset
+  filepath: data/03_master_data/master_data.csv
+  save_args:
+    index: False
+
+master_data_validation:
+  type: pandas.JSONDataset
+  filepath: data/04_validation/master_data_validation.json

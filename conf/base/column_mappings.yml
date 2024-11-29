@@ -1,0 +1,78 @@
+patients_mapping:
+  PATIENT_ID: patient_id
+  BIRTHDATE: birth_date
+  DEATHDATE: death_date
+  SSN: social_security_number
+  FIRST: first_name
+  LAST: last_name
+  RACE: race
+  ETHNICITY: ethnicity
+  BIRTHPLACE: birth_place
+  ADDRESS: address
+  CITY: city
+  STATE: state
+  COUNTY: county
+  ZIP: zip_code
+  LAT: latitude
+  LON: longitude
+  HEALTHCARE_EXPENSES: healthcare_expenses
+  HEALTHCARE_COVERAGE: healthcare_coverage
+  INCOME: income
+  GENDER: gender
+
+encounters_mapping:
+  Id: encounter_id
+  START: encounter_start_date
+  STOP: encounter_end_date
+  PATIENT: patient_id
+  ORGANIZATION: facility_id
+  PROVIDER: attending_provider_id
+  PAYER: payer_id
+  ENCOUNTERCLASS: encounter_type
+  CODE: admit_type_code
+  DESCRIPTION: admit_type_description
+  BASE_ENCOUNTER_COST: allowed_amount
+  TOTAL_CLAIM_COST: charge_amount
+  PAYER_COVERAGE: paid_amount
+  REASONCODE: primary_diagnosis_code
+  REASONDESCRIPTION: primary_diagnosis_description
+
+symptoms_mapping:
+  PATIENT: patient_id
+  AGE_BEGIN: observation_start_age
+  AGE_END: observation_end_age
+  PATHOLOGY: result
+  NUM_SYMPTOMS: num_symptoms
+  Fatigue: SYMPTOM_FATIGUE
+  Fever: SYMPTOM_FEVER
+  Joint Pain: SYMPTOM_JOINT_PAIN
+  Rash: SYMPTOM_RASH
+
+medications_mapping:
+  START: dispensing_start_date
+  STOP: dispensing_end_date
+  PATIENT: patient_id
+  PAYER: payer_id
+  ENCOUNTER: encounter_id
+  CODE: source_code
+  DESCRIPTION: source_description
+  BASE_COST: base_cost
+  PAYER_COVERAGE: payer_coverage
+  DISPENSES: quantity
+  TOTALCOST: total_cost
+  REASONCODE: primary_diagnosis_code
+  REASONDESCRIPTION: primary_diagnosis_description
+  MEDICATION_NAME: medication_name
+  STRENGTH: strength
+  ROUTE: route
+
+conditions_mapping:
+  START: recorded_date
+  STOP: resolved_date
+  PATIENT: patient_id
+  ENCOUNTER: encounter_id
+  CODE: primary_diagnosis_code
+  DESCRIPTION: primary_diagnosis_description
+
+
+
