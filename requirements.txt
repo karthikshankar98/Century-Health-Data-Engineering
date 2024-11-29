@@ -1,5 +1,6 @@
 ipython>=8.10
 jupyterlab>=3.0
+pySpark == 3.5.1
 kedro~=0.19.9
 kedro-datasets>=3.0
 great-expectations~=0.15.50
@@ -8,3 +9,5 @@ kedro[jupyter]
 notebook
 scikit-learn~=1.5.1
 setuptools; python_version >= "3.12"
+hdfs == 2.7.3
+s3fs == 2024.10.0
