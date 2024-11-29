@@ -18,13 +18,18 @@ This project processes and validates medical datasets related to Lupus patients.
    python -m venv env
    env\Scripts\activate
 
-3. Install dependencies:
+3. Install dependencies (might take about 3-4 mins):
    ```bash
    pip install -r requirements.txt
 
 4. Run the pipeline from the project root directory:
    ```bash
    kedro run
+
+## Outputs:
+1. you should be seeing a century_health.db file under data/02_staging/   - this .db file contains 5 individual processed tables for the datasets
+2. under data/03_master_data, you should find a .csv file  - this is essentially the merged dataset
+3. under data/04_validation, you should find a .json file - this is a data validation file run by Great Expectations
 
 ## Key Files
 nodes.py: Contains data cleaning and transformation logic.
