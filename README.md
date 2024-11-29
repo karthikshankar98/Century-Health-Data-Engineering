@@ -34,7 +34,9 @@ This project processes and validates medical datasets related to Lupus patients.
 ## Key Files
 src/century_health_pipeline/pipeline/data_engineering_CH/nodes.py: Contains data cleaning and transformation logic
 src/century_health_pipeline/pipeline/data_engineering_CH/pipeline.py: Defines the Kedro pipeline structure
+
 src/century_health_pipeline/pipeline/data_engineering_CH/validation.py: Implements validation checks using Great Expectations
+great_expectations/expectations/master_data_expectations.json: Basic validation rules for the master data
 
 conf/base/catalog.yml: Data catalog file
 
