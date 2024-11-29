@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "results": [
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "patient_id"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 21825,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "state",
+          "value_set": [
+            "Texas"
+          ]
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 21825,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "result",
+          "regex": ".*lupus.*"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 21825,
+        "missing_count": 16933,
+        "missing_percent": 77.58533791523482,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    }
+  ],
+  "evaluation_parameters": {},
+  "statistics": {
+    "evaluated_expectations": 3,
+    "successful_expectations": 3,
+    "unsuccessful_expectations": 0,
+    "success_percent": 100.0
+  },
+  "meta": {
+    "great_expectations_version": "0.15.50",
+    "expectation_suite_name": "master_data_expectations",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2024-11-29T11:19:29.548703+00:00"
+    },
+    "batch_kwargs": {
+      "ge_batch_id": "cce6b03a-ae43-11ef-8d93-047c16a4817b"
+    },
+    "batch_markers": {},
+    "batch_parameters": {},
+    "validation_time": "20241129T111929.548703Z",
+    "expectation_suite_meta": {
+      "great_expectations_version": "0.15.50"
+    }
+  }
+}
