@@ -1,4 +1,4 @@
-# Lupus Data Pipeline using Kedro framework
+# Data Pipeline using Kedro framework
 
 ## Overview
 This project processes and validates medical datasets related to Lupus patients. The pipeline cleans, merges, and validates data to produce a unified dataset.
