@@ -11,7 +11,7 @@ This project processes and validates medical datasets related to Lupus patients.
 1. Clone the repository:
    ```bash
    git clone https://github.com/karthikshankar98/Century-Health-Data-Engineering.git
-   cd Century-Health-Data-Engineering
+   cd Kedro-Data-Pipeline
 
 2. Create a virtual environment:
    ```bash
